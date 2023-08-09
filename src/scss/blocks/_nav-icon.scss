@@ -55,4 +55,16 @@
         transition: top var(--time) linear,
             transform var(--time) ease-in var(--time);
     }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.mobile-nav-btn {
+    z-index: 999;
 }
