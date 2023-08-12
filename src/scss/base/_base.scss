@@ -3,7 +3,11 @@ html {
 }
 
 body {
-    background-color: var(--page-bg);
-    color: var(--text-color);
-    font-family: var(--font-main);
+    
+}
+
+[class*="__container"] {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 15px;
 }

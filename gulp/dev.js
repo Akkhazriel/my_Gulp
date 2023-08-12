@@ -74,7 +74,7 @@ gulp.task('html:dev', function() {
     // Функция должна возвращать поток
     return gulp.src(['./src/html/**/*.html', '!./src/html/blocks/*.html'])
         // Включаем просмотр для оптимизации без повторного копирования файлов
-        .pipe(changed('./build/'))
+        .pipe(changed('./build/', { hasChanged: changed.compareContents }))
         .pipe(plumber(plumberNotify('HTML')))
         // Передам значения для создания объекта который будет описывать 
         .pipe(fileInclude(fileIncludeSettings))
