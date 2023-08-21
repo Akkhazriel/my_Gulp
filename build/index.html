@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metategs -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стартовый шаблон</title>
+    <!-- title -->
+    <title>javaJolt Roosters</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
+    <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com"
+    >
+    <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com"
+     crossorigin
+     >
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Jua&family=Poppins:wght@400;500;600&display=swap" 
+    rel="stylesheet"
+    >
     <!-- JS -->
     <script defer src="./js/index.bundle.js"></script>
 </head>
@@ -13,47 +28,44 @@
 
     <header class="header">
     <div class="header__container">
-        <a href="#!" class="header__logo">HTML</a>
-        <div class="header__navigation">
-            <nav class="header__menu menu">
-                <ul class="menu__body">
-                    <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">About Us</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Buying</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Recent</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Contacts</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Email</a></li>
-                </ul>
-            </nav>
-            <div class="header__buttons">
-                <button class="login header__btn">Login</button>
-                <button class="register header__btn">Sign Up</button>
+        <div class="header__row">
+            <a href="#!" class="header__logo">
+                <img src="./img/header/nav/logo.svg" alt="Logo" class="logo">
+            </a>
+            <div class="header__nav">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#!" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#!" class="nav__link">Blogs</a></li>
+                        <li class="nav__item"><a href="#!" class="nav__link">Explore Our Beans</a></li>
+                        <li class="nav__item"><a href="#!" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#!" class="nav__link">Contact us</a></li>
+                    </ul>
+                </nav>
+                <button class="header__button">Order Now</button>
             </div>
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+        <div class="header__content">
+            <div class="header__caption">
+                <h1 class="header__title">Experience the Finest Artisanal Coffee Roasting</h1>
+                <p class="header__desc">"Indulge in the Perfect Cup of Perfection"</p>
+                <button class="header__button">Shop Now</button>
+            </div>
+        </div>
+        <div class="header__cards">
+            <div class="header__card-white">
+                <h3 class="card__text">Non-Volatile Environment Temperatures in Nordic Coffee Roasting Style</h3>
+            </div>
+            <div class="header__card-coffee">
+                <h4 class="card__text">
+                    Our commitment to excellence begins with the selection 
+                    of the most extraordinary coffee beans from exclusive plantations 
+                    around the globe.
+                </h4>
             </div>
         </div>
     </div>
 </header>
-    <main class="main">
-        <section class="content">
-    <div class="content__container">
-        <div class="content__text">
-            <h1 class="text__title">Lorem ipsum dolor sit amet consectetur.</h1>
-            <div class="text__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Minus assumenda eos similique quod fuga consectetur enim praesentium magnam aspernatur. 
-                Voluptate odit esse nisi impedit ipsum animi tempore distinctio. Distinctio, numquam?</div>
-            <a href="#!" class="text__link">Read more</a>
-        </div>
-        <div class="content__img">
-            <img src="./../img/01.jpg" alt="IMG">
-        </div>
-    </div>
-</section>
-    </main>
-    
 
 </body>
 </html>

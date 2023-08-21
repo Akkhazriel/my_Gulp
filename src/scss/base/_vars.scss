@@ -1,8 +1,13 @@
 :root {
-    
+    --accent-color: #512615;
+    --main-color: #000;
+    --secondary-color: #FFF;
+
+    --main-font: 'Poppins', sans-serif;
+    --accent-font: 'Jomhuria', cursive;
+    --secondary-font: 'Jua', sans-serif;
 }
 
-// Темная тема сайта
-.dark {
-    
-}
+// font-family: 'Jomhuria', cursive;
+// font-family: 'Jua', sans-serif;
+// font-family: 'Poppins', sans-serif;

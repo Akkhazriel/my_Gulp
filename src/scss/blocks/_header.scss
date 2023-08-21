@@ -1,193 +1,116 @@
 .header {
-    padding: 40px 0;
-    // .header__container
-
+    background-image: url('./../../img/header/bg.jpg');
+    background-position: center center;
+    // background-size: cover;
+    background-repeat: no-repeat;
+    height: 1201px;
+    position: relative;
     &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        column-gap: 30px;
     }
 
-    // .header__logo
-
-    &__logo {
-        font-size: 32px;
-        color: transparent;    
-        -webkit-background-clip: text;
-        background-clip: text;
-        background-image: linear-gradient(45deg, rgb(229, 50, 129) 21%, rgb(97, 97, 97) 78%);
-    }
-
-    // .header__navigation
-
-    &__navigation {
+    &__nav {
         display: flex;
         align-items: center;
-        column-gap: 75px;
-    }
-
-    // .header__menu
-
-    &__menu {
-        display: flex;
-        align-items: center;
-    }
-
-    // .header__buttons
-
-    &__buttons {
-        display: flex;
-        column-gap: 10px;
-        align-items: center;
-    }
-
-    // .header__btn
-
-    &__btn {
-    }
-}
-.menu {
-    // ОВЕРЛЕЙ ДЛЯ МОБИЛЬНО ЙНАВИГАЦИИ
-    @media (max-width: 992px) {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        height: 100vh;
-        width: 80%;
-        display: flex;
-        overflow: auto;
-        background-color: #808080;
-        z-index: 5;
-        transition: left 0.4s ease-in;
-        &._active {
-            left: 0;
-            z-index: 5;
-        }
-    }
-    // БУРГЕР-МЕНЮ, ТРИ ПОЛОСКИ
-    &-icon {
-        display: none;
-        @media(max-width: 992px) {
-            display: block;
-            height: 18px;
-            width: 30px;
-            position: relative;
-            cursor: pointer;
-            z-index: 5;
-            span {
-                transition: all 0.5s ease-in;
-                top: calc(50% - 1px);
-                left: 0;
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                background-color: #000;
-                &:first-child {
-                    top: 0;
-                }
-                &:last-child {
-                    bottom: 0;
-                    top: auto;
-                }
+        column-gap: 24px;
+        .nav {
+            .nav__list {
+                display: flex;
+                align-items: center;
+                column-gap: 45px;
             }
-            &._active {
-                span {
-                    transform: scale(0);
-                    &:first-child {
-                        transform: rotate(-120deg);
-                        top: calc(50% - 1px);
-                    }
-                    &:last-child {
-                        transform: rotate(120deg);
-                        top: calc(50% - 1px);
-                    }
-                }
+            .nav__link {
+                color: var(--main-color);
+                font-family: var(--main-font);
+                font-size: 20px;
+                font-weight: 600;
             }
         }
-    }
-    // .menu__body
+        .header__button {
+            // text
+            color: var(--secondary-color);
+            font-family: var(--main-font);
+            font-size: 20px;
+            font-weight: 600;
 
-    &__body {
+            // background
+            padding: 1px 16px 2px 16px;
+            border-radius: 8px;
+            background: #1E1E1E;
+        }
+    }
+
+    &__content {
+        padding-top: 113px;
+    }
+
+    &__caption {
         display: flex;
-        align-items: center;
-        column-gap: 40px;
-        // ВЫСТРАИВАНИЕ НАВИГАЦИИ В КОЛОНКУ И ЦЕНТРИРОВАНИЕ
-        @media (max-width: 992px) {
-            flex-direction: column;
-            gap: 60px;
-            margin: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 556px;
+        row-gap: 27px;
+
+        .header__title {
+            color: var(--main-color);
+            font-family: var(--main-font);
+            font-size: 40px;
+            font-weight: 400;
+        }
+        .header__desc {
+            color: var(--main-color);
+            font-family: var(--main-font);
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .header__button {
+            color: var(--secondary-color);
+            font-family: var(--main-font);
+            font-size: 20px;
+            font-weight: 600;
+
+            // background
+            padding: 7px 33px;
+            border-radius: 8px;
+            background: #1E1E1E;
         }
     }
 
-    // .menu__item
-
-    &__item {
-    }
-
-    // .menu__link
-
-    &__link {
-        color: #000;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: 14px;
-        z-index: 10;
-
-        position: relative;
-
-        @media (max-width: 992px) {
-            line-height: 50px;
-            font-size: 30px;
-            color: #FFF;
-        }
-
-        @media(any-hover: hover ) {
-            &:hover::before {
-                animation-duration: 0.1s;
-                animation-name: slideIn;
-                animation-direction: alternate;
-                animation-timing-function: linear;
-                width: 100%;
-            }
-        }
-
-        &:before {
+    &__cards {
+        .header__card-white {
             position: absolute;
-            content: '';
-            display: block;
-
-            left: 0;
-            right: 0;
-            width: 0;
-            height: 1px;
-            background-color: #000;
-            bottom: -2px;
-            opacity: 1;
-            transition: all 0.2s ease-in-out;
- 
+            bottom: 17.9%;
+            left: 20%;
+            .card__text {
+                color: var(--main-color);
+                font-family: var(--main-font);
+                font-size: 24px;
+                font-weight: 500;
+                max-width: 343px;
+            }
         }
-    }
-}
-.login {
-    background-color: #eb1a7b;
-    padding: 10px 20px;
-    color: #FFF;
-    border-radius: 5px;
-}
-.register {
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-}
-
-@keyframes slideIn {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    to {
-        width: 100%;
-        opacity: 1;
+        .header__card-coffee {
+            position: absolute;
+            bottom: 14%;
+            right: 28.5%;
+            .card__text {
+                color: var(--secondary-color);
+                font-family: var(--main-font);
+                font-size: 24px;
+                font-weight: 500;
+                max-width: 388px;
+            }
+        }
     }
 }
