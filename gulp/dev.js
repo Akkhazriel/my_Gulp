@@ -25,7 +25,8 @@ const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 // Подключение gulp-sass-glob для удобной установки scss
 const sassGlob = require('gulp-sass-glob');
-
+// PUG-препроцессор
+const gulpPug = require('gulp-pug');
 
 
 // Функция, которая создает уведомление и меняет ему название чтобы не писать один объект несколько раз
@@ -67,8 +68,14 @@ const startServerSettings = {
     open: true,
 }
 
-
-
+gulp.task('pug:dev', function() {
+    return gulp.src('./src/pug/**/*.pug')
+        .pipe(
+            gulpPug({})
+        )
+        .pipe(gulp.dest('./build/pug/'))
+})
+ 
 // Task для обработки HTML
 gulp.task('html:dev', function() {
     // Функция должна возвращать поток
@@ -155,6 +162,7 @@ gulp.task('server:dev', function() {
 gulp.task('watch:dev', function() {
     gulp.watch('./src/scss/**/*.scss',gulp.parallel('sass:dev'));
     gulp.watch('./src/**/*.html', gulp.parallel('html:dev'));
+    gulp.watch('./src/pug/*.pug', gulp.parallel('pug:dev'));
     gulp.watch('./src/img/**/*', gulp.parallel('images:dev'));
     gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'));
     gulp.watch('./src/files/**/*', gulp.parallel('files:dev'));
