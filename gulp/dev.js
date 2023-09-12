@@ -71,9 +71,9 @@ const startServerSettings = {
 gulp.task('pug:dev', function() {
     return gulp.src('./src/pug/**/*.pug')
         .pipe(
-            gulpPug({})
+            gulpPug({ pretty: true })
         )
-        .pipe(gulp.dest('./build/pug/'))
+        .pipe(gulp.dest('./build/'))
 })
  
 // Task для обработки HTML
@@ -162,7 +162,7 @@ gulp.task('server:dev', function() {
 gulp.task('watch:dev', function() {
     gulp.watch('./src/scss/**/*.scss',gulp.parallel('sass:dev'));
     gulp.watch('./src/**/*.html', gulp.parallel('html:dev'));
-    gulp.watch('./src/pug/*.pug', gulp.parallel('pug:dev'));
+    gulp.watch('./src/**/*.pug', gulp.parallel('pug:dev'));
     gulp.watch('./src/img/**/*', gulp.parallel('images:dev'));
     gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'));
     gulp.watch('./src/files/**/*', gulp.parallel('files:dev'));
