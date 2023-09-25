@@ -92,10 +92,10 @@ gulp.task('html:dev', function() {
 // Task для SASS/SCSS + sourceMaps
 gulp.task('sass:dev', function() {
     // Берем все scss файлы в этой директории
-    return gulp.src('./src/scss/*.scss')
+    return gulp.src('./src/scss/*.sass')
         // Включаем просмотр для оптимизации без повторного копирования файлов
         .pipe(changed('./build/css'))
-        .pipe(plumber(plumberNotify('SCSS')))
+        .pipe(plumber(plumberNotify('SASS')))
         // Инициализируем плагин
         .pipe(sourceMaps.init())
         .pipe(sassGlob())
@@ -160,7 +160,7 @@ gulp.task('server:dev', function() {
 
 // Task для наблюдения за html, css и картинками
 gulp.task('watch:dev', function() {
-    gulp.watch('./src/scss/**/*.scss',gulp.parallel('sass:dev'));
+    gulp.watch('./src/scss/**/*.sass',gulp.parallel('sass:dev'));
     gulp.watch('./src/**/*.html', gulp.parallel('html:dev'));
     gulp.watch('./src/**/*.pug', gulp.parallel('pug:dev'));
     gulp.watch('./src/img/**/*', gulp.parallel('images:dev'));

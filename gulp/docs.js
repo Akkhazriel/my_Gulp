@@ -103,10 +103,10 @@ gulp.task('html:docs', function() {
 // Task для SASS/SCSS + sourceMaps
 gulp.task('sass:docs', function() {
     // Берем все scss файлы в этой директории
-    return gulp.src('./src/scss/*.scss')
+    return gulp.src('./src/scss/*.sass')
         // Включаем просмотр для оптимизации без повторного копирования файлов
         .pipe(changed('./docs/css'))
-        .pipe(plumber(plumberNotify('SCSS')))
+        .pipe(plumber(plumberNotify('SASS')))
         // Инициализируем плагин
         .pipe(sourceMaps.init())
         .pipe(autoprefixer())
