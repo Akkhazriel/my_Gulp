@@ -1,1 +1,1 @@
-(()=>{"use strict";const e=document.querySelector(".menu-icon"),t=document.querySelector(".menu"),c=document.body;e&&t&&e.addEventListener("click",(()=>{e.classList.toggle("_active"),t.classList.toggle("_active"),c.classList.toggle("no_scroll")}))})();
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector(".menu-btn"),t=document.querySelector(".nav"),c=document.body;e.addEventListener("click",(()=>{e.classList.toggle("active"),t.classList.toggle("active"),c.classList.toggle("no-scroll")}))}))()})();
